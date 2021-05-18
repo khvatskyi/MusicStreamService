@@ -1,0 +1,36 @@
+﻿@page "/Albums"
+@using BlazorUI.Models
+@using BlazorUI.Interfaces.IServices
+@using Microsoft.AspNetCore.Components
+
+@inject IAlbumService albumService
+@inject NavigationManager NavigationManager
+
+<h1>Albums</h1>
+<div class="albumList">
+    @if (albums == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        foreach (var album in albums)
+        {
+            <AlbumCard album=@album @onclick="() => ToAlbum(album.id)"></AlbumCard>
+        }
+    }
+</div>
+
+@code {
+    private IEnumerable<AlbumViewModel> albums;
+
+    protected override async Task OnInitializedAsync()
+    {
+        albums = await albumService.GetAlbumsAsync();
+    }
+
+    private void ToAlbum(int albumId)
+    {
+        NavigationManager.NavigateTo($"/Albums/{albumId}");
+    }
+}

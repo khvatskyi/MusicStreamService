@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MusicStreamServiceApp.API</name>
+    </assembly>
+    <members>
+        <member name="M:MusicStreamServiceApp.API.Controllers.AccountController.RegisterUser(MusicStreamServiceApp.BLL.DTOs.UserDTO)">
+            <summary>
+            Register
+            </summary>
+            <param name="userDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.AccountController.Authenticate(MusicStreamServiceApp.BLL.DTOs.UserLoginDTO)">
+            <summary>
+            Log in
+            </summary>
+            <param name="userDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.AccountController.Get">
+            <summary>
+            GetAll
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.AccountController.GetForUpdate(System.String)">
+            <summary>
+            GetForUpdateById
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.AccountController.Put(System.String,MusicStreamServiceApp.BLL.DTOs.UserUpdateDTO)">
+            <summary>
+            Update user
+            </summary>
+            <param name="id"></param>
+            <param name="userDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.AccountController.Delete(System.String)">
+            <summary>
+            Delete user
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.AccountController.Logout">
+            <summary>
+            Logout
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.PlaylistController.GetAll">
+            <summary>
+            Get all playlists
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.PlaylistController.GetAllUserPlaylists(System.String)">
+            <summary>
+            Get all playlists of user
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.PlaylistController.Get(System.Int32)">
+            <summary>
+            Get Playlist by Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.PlaylistController.GetUserPlaylist(System.String,System.String)">
+            <summary>
+            Get Playlist by UserId
+            </summary>
+            <param name="UserId"></param>
+            <param name="PlaylistName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.PlaylistController.PostMusicToPlaylist(MusicStreamServiceApp.BLL.DTOs.MusicPlaylistDTO)">
+            <summary>
+            Add Music to Playlist
+            </summary>
+            <param name="musicPlaylistDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.PlaylistController.PostPlaylist(System.String,MusicStreamServiceApp.BLL.DTOs.PlaylistCUDTO)">
+            <summary>
+            Create playlist
+            </summary>
+            <param name="UserId"></param>
+            <param name="playlistCreateDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.PlaylistController.PutPlaylistName(System.Int32,MusicStreamServiceApp.BLL.DTOs.PlaylistCUDTO)">
+            <summary>
+            Update the playlist name
+            </summary>
+            <param name="Id"></param>
+            <param name="playlistCUDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.PlaylistController.DeletePlaylist(System.Int32)">
+            <summary>
+            Delete playlist
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.API.Controllers.PlaylistController.DeleteMusicFromPlaylist(MusicStreamServiceApp.BLL.DTOs.MusicPlaylistDTO)">
+            <summary>
+            Delete music from playlist
+            </summary>
+            <param name="musicPlaylistDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.AlbumController.GetAll">
+            <summary>
+            Get all
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.AlbumController.Get(System.Int32)">
+            <summary>
+            Get by Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.AlbumController.Post(MusicStreamServiceApp.BLL.DTOs.AlbumDTO)">
+            <summary>
+            Create album
+            </summary>
+            <param name="albumDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.AlbumController.Put(System.Int32,MusicStreamServiceApp.BLL.DTOs.AlbumDTO)">
+            <summary>
+            Update by Id
+            </summary>
+            <param name="Id"></param>
+            <param name="albumDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.AlbumController.Delete(System.Int32)">
+            <summary>
+            Delete by Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.GenreController.GetAll">
+            <summary>
+            Get All
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.GenreController.Get(System.Int32)">
+            <summary>
+            Get by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.GenreController.Post(MusicStreamServiceApp.BLL.DTOs.GenreDTO)">
+            <summary>
+            Create genre
+            </summary>
+            <param name="genreDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.GenreController.Put(System.Int32,MusicStreamServiceApp.BLL.DTOs.GenreDTO)">
+            <summary>
+            Update by Id
+            </summary>
+            <param name="id"></param>
+            <param name="genreDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.GenreController.Delete(System.Int32)">
+            <summary>
+            Delete by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.MusicController.GetAll">
+            <summary>
+            Get all
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.MusicController.GetByAlbum(System.Int32)">
+            <summary>
+            Get by AlbumId
+            </summary>
+            <param name="AlbumId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.MusicController.GetForView(System.Int32)">
+            <summary>
+            Get by Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.MusicController.GetForUpdate(System.Int32)">
+            <summary>
+            Get for Update by Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.MusicController.Add(MusicStreamServiceApp.BLL.DTOs.MusicCUDTO)">
+            <summary>
+            Add music
+            </summary>
+            <param name="musicDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.MusicController.Update(System.Nullable{System.Int32},MusicStreamServiceApp.BLL.DTOs.MusicCUDTO)">
+            <summary>
+            Update music
+            </summary>
+            <param name="Id"></param>
+            <param name="musicDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MusicStreamServiceApp.WEBAPI.Controllers.MusicController.Delete(System.Int32)">
+            <summary>
+            Delete by Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,78 @@
+﻿.albumCard {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-top: 3%;
+    box-shadow: 5px black;
+    border: none;
+    animation: margTopAnimation;
+    animation-duration: 0.3s;
+}
+
+.demo-mat-card-content {
+    padding: 1rem;
+    width: 100%;
+}
+
+.card-img {
+    background-size: cover;
+    background-color: none;
+}
+
+.authorinfo {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album-info {
+    display: flex;
+}
+
+img {
+    animation: borderRadiusAnimation;
+    border-radius: 50%;
+    animation-duration: 0.3s;
+    max-height: 300px;
+    transition-duration: 0.2s;
+}
+
+    img:hover {
+        filter: brightness(75%);
+        cursor: pointer;
+    }
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.albumList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+@keyframes borderRadiusAnimation {
+    0% {
+        border-radius: 0%;
+    }
+
+    100% {
+        border-radius: 50%;
+    }
+}
+
+@keyframes margTopAnimation {
+    0% {
+        margin-top: 0%;
+    }
+
+    100% {
+        margin-top: 3%;
+    }
+}
+

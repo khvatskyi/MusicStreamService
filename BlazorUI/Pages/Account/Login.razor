@@ -1,0 +1,67 @@
+﻿@layout AuthenticationLayout
+@page "/Account/Login"
+@using BlazorUI.Models.AccountModels
+@using Interfaces.IServices
+@using Microsoft.AspNetCore.Components
+
+@inject IAccountService accountService
+@inject NavigationManager NavigationManager
+
+<link rel="stylesheet" type="text/css" href="PagesCss/alertStyle.css">
+
+<div class="col-lg-12 card p-5">
+    <EditForm Model="@user" OnValidSubmit="@LoginUser">
+        <FluentValidationValidator />
+        <div>
+            <h3 style="font-weight:bold; color:brown;">Music Player Login</h3>
+        </div>
+        <br />
+        <ValidationMessage For="@(() => user.email)" />
+        <div class="card-columns row">
+            <InputText class="form-control" @bind-Value="user.email" placeholder="Email address" />
+        </div>
+        <br />
+        <ValidationMessage For="@(() => user.password)" />
+        <div class="card-columns row">
+            <InputText type="password" class="form-control" @bind-Value="user.password" placeholder="Password" />
+        </div>
+        @if (ErrorMessageList != null)
+        {
+            <br />
+            foreach (var message in ErrorMessageList)
+            {
+                <div class="alert alert-danger" role="alert">@message</div>
+            }
+        }
+        <br />
+        <div>
+            <span class="col-12"></span>
+            <input type="submit" class="form-control col-6 btn btn-primary" value="Login" />
+            <a href="Account/Register" class="col-5">Sign up</a>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    UserLoginModel user = new UserLoginModel
+    {
+        email = "test@gmail.com",
+        password = "0000a"
+    };
+
+    List<string> ErrorMessageList;
+
+    private async Task LoginUser()
+    {
+        try
+        {
+            ErrorMessageList = null;
+            await accountService.AuthenticateUserAsync(user);
+            NavigationManager.NavigateTo("/");
+        }
+        catch(ARException e)
+        {
+            ErrorMessageList = e.MessageList;
+        }
+    }
+}

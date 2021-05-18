@@ -1,0 +1,8 @@
+﻿@page "/Playlists/{Name}"
+
+    <p>Your playlist is @Name!</p>
+
+@code {
+    [Parameter]
+    public string Name { get; set; }
+}

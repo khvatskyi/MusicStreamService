@@ -1,0 +1,68 @@
+﻿@page "/Albums/{AlbumId:int}"
+@using Models
+@using Services
+@using Interfaces.IServices
+@inject MusicService musicService
+@inject IAlbumService albumService
+
+<link rel="stylesheet" type="text/css" href="PagesCss/albumStyles/albumStyle.css">
+
+@if (string.IsNullOrEmpty(ErrorMessage) && album != null)
+{
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-row">
+            <img src="@album.photoPath" />
+            <div>
+                <h2><b>@album.name.ToUpper()</b></h2>
+                <h4>Альбом • @album.year</h4>
+                <h4><u>Автор</u>: @album.author</h4>
+            </div>
+        </div>
+        @if (MusicList != null)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var music in MusicList)
+                    {
+                        <tr>
+                            <td><a href="/Music/@music.id">@music.name</a></td>
+                            <td>@music.year</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+}
+else
+{
+    <p><h1>@ErrorMessage</h1></p>
+}
+
+@code {
+    AlbumViewModel album;
+    IEnumerable<MusicViewModel> MusicList;
+    string ErrorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            album = await albumService.GetAlbumById(AlbumId);
+            MusicList = await musicService.GetAllMusicByAlbumAsync(AlbumId);
+        }
+        catch (HttpRequestException e)
+        {
+            ErrorMessage = e.Message;
+        }
+    }
+
+    [Parameter]
+    public int AlbumId { get; set; }
+}
