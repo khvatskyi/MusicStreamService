@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Components
+@using BlazorUI.Interfaces.IServices
+@inject NavigationManager NavigationManager
+@inject IAccountService AccountService
+
+<AuthorizeView>
+    <Authorized>
+        <a href="Identity/Account/Manager">Hello, @context.User.Identity.Name</a>
+        <button @onclick="LogoutAsync" class="nav-link btn btn-link">Log out</button>
+    </Authorized>
+    <NotAuthorized>
+        <a href="Account/Login">Log in</a>
+        <a href="Account/Register">Register</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+
+    private async Task LogoutAsync()
+    {
+        await AccountService.LogoutUserAsync();
+        NavigationManager.NavigateTo("/");
+    }
+}

@@ -1,0 +1,25 @@
+﻿@using Models
+
+<link rel="stylesheet" type="text/css" href="PagesCss/albumStyles/albumCardStyle.css">
+
+<div class="card albumCard">
+    <img src="@album.photoPath" @onclick="onclick" />
+    <div class="demo-mat-card-content">
+        <div class="authorinfo album-info">
+            <span> @album.name</span>
+            <div class="album-info">
+                <span>@album.author</span>
+                <span> • </span>
+                <span>@album.year</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public AlbumViewModel album { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> onclick { get; set; }
+}

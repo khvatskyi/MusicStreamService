@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorUI", "BlazorUI\BlazorUI.csproj", "{A096D12E-D111-43A1-A711-9AFA13F115A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStreamServiceApp.DAL", "MusicStreamServiceApp.DAL\MusicStreamServiceApp.DAL.csproj", "{54F3275D-91A9-4203-9CAC-87453C796735}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStreamServiceApp.BLL", "MusicStreamServiceApp.BLL\MusicStreamServiceApp.BLL.csproj", "{BED51458-FBA2-4BC6-8A2D-5B499AC724A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStreamServiceApp.API", "MusicStreamServiceApp.API\MusicStreamServiceApp.API.csproj", "{569662CB-2A0C-4A44-B864-A4A20D411DA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A096D12E-D111-43A1-A711-9AFA13F115A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A096D12E-D111-43A1-A711-9AFA13F115A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A096D12E-D111-43A1-A711-9AFA13F115A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A096D12E-D111-43A1-A711-9AFA13F115A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F3275D-91A9-4203-9CAC-87453C796735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F3275D-91A9-4203-9CAC-87453C796735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F3275D-91A9-4203-9CAC-87453C796735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F3275D-91A9-4203-9CAC-87453C796735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED51458-FBA2-4BC6-8A2D-5B499AC724A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED51458-FBA2-4BC6-8A2D-5B499AC724A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED51458-FBA2-4BC6-8A2D-5B499AC724A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED51458-FBA2-4BC6-8A2D-5B499AC724A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569662CB-2A0C-4A44-B864-A4A20D411DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569662CB-2A0C-4A44-B864-A4A20D411DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569662CB-2A0C-4A44-B864-A4A20D411DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569662CB-2A0C-4A44-B864-A4A20D411DA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FF7ED29-F00E-4686-90EA-3CAF5DFEAA69}
+	EndGlobalSection
+EndGlobal

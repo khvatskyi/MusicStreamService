@@ -1,0 +1,17 @@
+﻿@page "/Account/Logout"
+@using Microsoft.AspNetCore.Components
+@using BlazorUI.Interfaces.IServices
+@inject NavigationManager NavigationManager
+@inject IAccountService AccountService
+
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await AccountService.LogoutUserAsync();
+            NavigationManager.NavigateTo("/");
+        }
+    }
+}

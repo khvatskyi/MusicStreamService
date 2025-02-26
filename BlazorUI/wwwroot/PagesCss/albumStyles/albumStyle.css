@@ -1,0 +1,20 @@
+﻿tr {
+    background-color: white;
+    transition: 0.1s;
+}
+
+thead > tr {
+    filter: brightness(95%);
+}
+
+img {
+    max-width: 250px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-top: 5px;
+}
+
+tbody > tr:hover {
+    filter: brightness(90%);
+}

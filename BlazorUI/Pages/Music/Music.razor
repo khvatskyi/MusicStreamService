@@ -1,0 +1,41 @@
+﻿@page "/Music"
+
+@using Models
+@inject Services.MusicService musicService
+
+<h2>Music</h2>
+@if (musicList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var music in musicList)
+            {
+                <tr>
+                    <td>@music.name</td>
+                    <td>@music.author</td>
+                    <td>@music.year</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    IEnumerable<MusicViewModel> musicList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        musicList = await musicService.GetAllMusicAsync();
+    }
+}

@@ -1,0 +1,13 @@
+﻿@keyframes alertAnimation{
+    0%{
+        margin-left: 10px;
+    }
+    100%{
+        margin-left: 0;
+    }
+}
+
+.alert{
+    animation: alertAnimation;
+    animation-duration: 0.3s;
+}
